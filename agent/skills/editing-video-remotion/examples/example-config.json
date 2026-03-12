@@ -1,0 +1,49 @@
+{
+  "description": "Example configuration for a video edit job",
+  "examples": [
+    {
+      "name": "Basic reel edit (vertical, English)",
+      "command": "npx tsx process-video.ts --input ~/Desktop/Clientes/JorgeVergara/raw-video.mp4 --preset reelVertical"
+    },
+    {
+      "name": "Square reel (Spanish audio)",
+      "command": "npx tsx process-video.ts --input ~/Desktop/video.mp4 --preset reelSquare --language es --model medium"
+    },
+    {
+      "name": "Landscape with custom output path",
+      "command": "npx tsx process-video.ts --input ~/Desktop/video.mp4 --output ~/Desktop/Clientes/ClientName/04_contenido/video-final.mp4 --preset landscape"
+    },
+    {
+      "name": "Skip Auphonic (use original audio)",
+      "command": "npx tsx process-video.ts --input ~/Desktop/video.mp4 --skip-audio"
+    }
+  ],
+  "presets": {
+    "reelVertical": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "use_case": "Instagram Reels, TikTok, YouTube Shorts"
+    },
+    "reelSquare": {
+      "width": 1080,
+      "height": 1080,
+      "fps": 30,
+      "use_case": "Instagram feed posts, Facebook feed"
+    },
+    "landscape": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "use_case": "YouTube videos, presentations"
+    }
+  },
+  "caption_customization": {
+    "description": "To customize captions per client, edit src/theme.ts in the remotion-studio project",
+    "example_brand_colors": {
+      "Jorge Vergara (Financial)": "#1A73E8",
+      "Walter Pagano (Credit)": "#00C853",
+      "Sales Velocity (Default)": "#BFF549"
+    }
+  }
+}

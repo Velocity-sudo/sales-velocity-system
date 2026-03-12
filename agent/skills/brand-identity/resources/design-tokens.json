@@ -1,0 +1,109 @@
+{
+    "brand": {
+        "name": "Sales Velocity",
+        "tagline": "Automatización y estrategia de ventas",
+        "notionSopId": "2ffe0f37-6c6d-81be-8580-e7f681e712a9",
+        "notionSopUrl": "https://www.notion.so/SOP-Identidad-de-Marca-Sales-Velocity-2ffe0f376c6d81be8580e7f681e712a9"
+    },
+    "colors": {
+        "primary": {
+            "navy": "#1a1f3d",
+            "description": "Textos principales y encabezados"
+        },
+        "accent": {
+            "electricBlue": "#2563eb",
+            "description": "CTAs, enlaces y elementos de acción"
+        },
+        "background": {
+            "white": "#FFFFFF",
+            "description": "Fondos limpios y profesionales"
+        },
+        "semantic": {
+            "success": "#10B981",
+            "destructive": "#EF4444",
+            "warning": "#F59E0B",
+            "info": "#3B82F6"
+        }
+    },
+    "typography": {
+        "headings": {
+            "fontFamily": "Inter",
+            "weights": {
+                "bold": 700,
+                "semibold": 600
+            }
+        },
+        "body": {
+            "fontFamily": "Roboto",
+            "weights": {
+                "regular": 400,
+                "medium": 500
+            }
+        },
+        "googleFontsImport": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500&display=swap');"
+    },
+    "spacing": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px",
+        "xxl": "48px"
+    },
+    "borderRadius": {
+        "sm": "4px",
+        "md": "8px",
+        "lg": "12px",
+        "full": "9999px"
+    },
+    "shadows": {
+        "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+        "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+        "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+    },
+    "logos": {
+        "primary": {
+            "description": "Logo azul principal - Uso general",
+            "localPath": "opciones_de_logo/logo_principal_sv.png"
+        },
+        "variants": {
+            "gold": {
+                "description": "Logo dorado - Materiales premium/high-ticket",
+                "localPath": "opciones_de_logo/logo_option_2_gold.png"
+            },
+            "purple": {
+                "description": "Logo púrpura - Contenido tech/innovación",
+                "localPath": "opciones_de_logo/logo_option_3_purple.png"
+            },
+            "green": {
+                "description": "Logo verde - Contenido de crecimiento/resultados",
+                "localPath": "opciones_de_logo/logo_option_4_green.png"
+            }
+        }
+    },
+    "voiceTone": {
+        "principles": [
+            "Directo y sin rodeos",
+            "Cercano pero firme",
+            "Orientado a resultados",
+            "Humor estratégico",
+            "Enfoque en crecimiento"
+        ],
+        "forbiddenWords": [
+            "Utilizar",
+            "Con el fin de",
+            "Implementar",
+            "Leverage",
+            "Journey",
+            "Pain points",
+            "Sinergia",
+            "Robusto"
+        ],
+        "writingRules": {
+            "maxWordsPerSentence": 20,
+            "maxLinesPerParagraph": 3,
+            "exclamationsPerDocument": 1,
+            "voiceStyle": "active"
+        }
+    }
+}

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Marca — {{NOMBRE_CLIENTE}}</title>
+    <link href="https://fonts.googleapis.com/css2?family={{FUENTE_URL}}&display=swap" rel="stylesheet">
+    <style>
+        /* ── RESET ── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ── ROOT TOKENS ── */
+        :root {
+            --brand-black: {
+                    {
+                    COLOR_OSCURO
+                }
+            }
+
+            ;
+
+            --brand-white: {
+                    {
+                    COLOR_CLARO
+                }
+            }
+
+            ;
+
+            --brand-text: {
+                    {
+                    COLOR_TEXTO
+                }
+            }
+
+            ;
+
+            --brand-gray-mid: {
+                    {
+                    COLOR_SECUNDARIO_1
+                }
+            }
+
+            ;
+
+            --brand-off-white: {
+                    {
+                    COLOR_CARD_BG
+                }
+            }
+
+            ;
+
+            --brand-accent: {
+                    {
+                    COLOR_ACENTO
+                }
+            }
+
+            ;
+
+            --brand-accent-light: {
+                    {
+                    COLOR_ACENTO_CLARO
+                }
+            }
+
+            ;
+
+            --brand-accent-deep: {
+                    {
+                    COLOR_ACENTO_OSCURO
+                }
+            }
+
+            ;
+            --brand-font: '{{FUENTE_PRINCIPAL}}',
+            sans-serif;
+            --brand-radius: 20px;
+            --brand-max-content: 800px;
+        }
+
+        /* ── BASE ── */
+        body {
+            font-family: var(--brand-font);
+            background: var(--brand-black);
+            color: var(--brand-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAV ── */
+        .brand-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: sticky;
+            top: 0;
+            background: var(--brand-black);
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .brand-nav .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .brand-nav .logo span {
+            color: var(--brand-accent);
+        }
+
+        .brand-nav .version {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            opacity: 0.5;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            text-align: center;
+            padding: 120px 5% 80px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .hero .eyebrow {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--brand-accent);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.7;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ── SECTIONS ── */
+        .section {
+            padding: 80px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .section-title {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--brand-accent);
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            opacity: 0.85;
+            max-width: 650px;
+        }
+
+        /* ── IDENTITY TABLE ── */
+        .identity-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        .identity-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 0.95rem;
+        }
+
+        .identity-table td:first-child {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            opacity: 0.5;
+            width: 160px;
+            vertical-align: top;
+        }
+
+        /* ── PILLAR CARDS ── */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .pillar-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--brand-radius);
+            padding: 40px 32px;
+            transition: all 0.4s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-accent);
+        }
+
+        .pillar-card .number {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--brand-accent);
+            margin-bottom: 16px;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* ── COLOR SWATCHES ── */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .swatch {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .swatch-color {
+            height: 100px;
+            display: flex;
+            align-items: flex-end;
+            padding: 12px 16px;
+        }
+
+        .swatch-info {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .swatch-info .name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .swatch-info .hex {
+            font-family: monospace;
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        .swatch-info .use {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            margin-top: 8px;
+        }
+
+        /* ── TYPOGRAPHY SHOWCASE ── */
+        .type-showcase {
+            margin-top: 32px;
+        }
+
+        .type-row {
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .type-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.4;
+            width: 120px;
+            flex-shrink: 0;
+        }
+
+        .type-sample {
+            flex: 1;
+        }
+
+        /* ── COMPONENT DEMOS ── */
+        .demo-block {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--brand-radius);
+            padding: 48px 40px;
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .demo-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            opacity: 0.4;
+            margin-bottom: 8px;
+        }
+
+        /* ── BUTTONS ── */
+        .btn-cta {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: var(--brand-accent);
+            color: #fff;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
+            color: var(--brand-white);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--brand-accent);
+            color: var(--brand-accent);
+        }
+
+        /* ── EYEBROW BADGE ── */
+        .eyebrow-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ── TESTIMONIAL CARD ── */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--brand-radius);
+            padding: 40px 32px;
+            max-width: 500px;
+        }
+
+        .testimonial-card .quote {
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.7;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card .author {
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0.6;
+        }
+
+        /* ── VOICE CARDS ── */
+        .voice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .voice-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+
+        .voice-card .attr {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--brand-accent);
+            margin-bottom: 12px;
+        }
+
+        .voice-card .val {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* ── STATS ROW ── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 32px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+        }
+
+        .stat-item .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--brand-accent);
+            margin-bottom: 8px;
+        }
+
+        .stat-item .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.5;
+        }
+
+        /* ── DON'TS LIST ── */
+        .donts-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .donts-list li {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .donts-list .icon {
+            color: #e74c3c;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ── CODE BLOCK ── */
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 32px;
+            margin-top: 32px;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.8rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ── FOOTER ── */
+        .brand-footer {
+            text-align: center;
+            padding: 60px 5%;
+            opacity: 0.4;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 5% 60px;
+            }
+
+            .section {
+                padding: 60px 5%;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .color-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .type-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .voice-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════════════ NAV ═══════════════ -->
+    <nav class="brand-nav">
+        <div class="logo">{{NOMBRE_CORTO}} <span>{{APELLIDO}}</span></div>
+        <div class="version">Manual de Marca v1.0</div>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero">
+        <div class="eyebrow">Brand Guidelines</div>
+        {{IF_LOGO_START}}
+        <img src="{{URL_LOGO}}" alt="Logo {{NOMBRE_CLIENTE}}" style="max-height: 80px; margin-bottom: 24px;">
+        {{IF_LOGO_END}}
+        <h1>{{NOMBRE_CLIENTE}}</h1>
+        <p class="tagline">{{TAGLINE}}</p>
+    </section>
+
+    <!-- ═══════════════ 01 · IDENTIDAD ═══════════════ -->
+    <section class="section">
+        <div class="section-title">01 · Identidad de Marca</div>
+        <h2>¿Quién es {{NOMBRE_CORTO}}?</h2>
+
+        <table class="identity-table">
+            <tr>
+                <td>Nombre</td>
+                <td>{{NOMBRE_CLIENTE}}</td>
+            </tr>
+            <tr>
+                <td>Tagline</td>
+                <td><em>"{{TAGLINE}}"</em></td>
+            </tr>
+            <tr>
+                <td>Industria</td>
+                <td>{{INDUSTRIA}}</td>
+            </tr>
+            <tr>
+                <td>Personalidad</td>
+                <td>{{RASGOS_PERSONALIDAD}}</td>
+            </tr>
+            <tr>
+                <td>Handle</td>
+                <td>@{{HANDLE_IG}}</td>
+            </tr>
+            <tr>
+                <td>Web</td>
+                <td>{{SITIO_WEB}}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{EMAIL_CONTACTO}}</td>
+            </tr>
+            <tr>
+                <td>Ubicación</td>
+                <td>{{CIUDAD}}, {{PAIS}}</td>
+            </tr>
+        </table>
+
+        <h3 style="font-size:1.1rem; margin-bottom:20px;">Pilares de Marca</h3>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="number">Pilar 01</div>
+                <h3>{{PILAR_1}}</h3>
+                <p>{{DESCRIPCION_PILAR_1}}</p>
+            </div>
+            <div class="pillar-card">
+                <div class="number">Pilar 02</div>
+                <h3>{{PILAR_2}}</h3>
+                <p>{{DESCRIPCION_PILAR_2}}</p>
+            </div>
+            <div class="pillar-card">
+                <div class="number">Pilar 03</div>
+                <h3>{{PILAR_3}}</h3>
+                <p>{{DESCRIPCION_PILAR_3}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 02 · COLORES ═══════════════ -->
+    <section class="section">
+        <div class="section-title">02 · Paleta de Colores</div>
+        <h2>Color System</h2>
+        <p style="margin-bottom:24px;">{{PRINCIPIO_COLOR}}</p>
+
+        <h3 style="font-size:0.9rem; margin-bottom:16px; opacity:0.6;">Colores Primarios</h3>
+        <div class="color-grid">
+            <div class="swatch">
+                <div class="swatch-color" style="background:{{COLOR_OSCURO}};"></div>
+                <div class="swatch-info">
+                    <div class="name">Base Oscuro</div>
+                    <div class="hex">{{HEX_OSCURO}}</div>
+                    <div class="use">Fondos, textos principales</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:{{COLOR_CLARO}};"></div>
+                <div class="swatch-info">
+                    <div class="name">Base Claro</div>
+                    <div class="hex">{{HEX_CLARO}}</div>
+                    <div class="use">Texto sobre fondos oscuros</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:{{COLOR_TEXTO}};"></div>
+                <div class="swatch-info">
+                    <div class="name">Texto</div>
+                    <div class="hex">{{HEX_TEXTO}}</div>
+                    <div class="use">Cuerpo de texto</div>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="font-size:0.9rem; margin:40px 0 16px; opacity:0.6;">Color de Acento</h3>
+        <div class="color-grid">
+            <div class="swatch">
+                <div class="swatch-color" style="background:var(--brand-accent);"></div>
+                <div class="swatch-info">
+                    <div class="name">Acento Principal</div>
+                    <div class="hex">{{HEX_ACENTO}}</div>
+                    <div class="use">Bordes hover, líneas decorativas</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:var(--brand-accent-light);"></div>
+                <div class="swatch-info">
+                    <div class="name">Acento Claro</div>
+                    <div class="hex">{{HEX_ACENTO_CLARO}}</div>
+                    <div class="use">Badges, highlights</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:var(--brand-accent-deep);"></div>
+                <div class="swatch-info">
+                    <div class="name">Acento Profundo</div>
+                    <div class="hex">{{HEX_ACENTO_OSCURO}}</div>
+                    <div class="use">CTAs, hover intenso</div>
+                </div>
+            </div>
+        </div>
+
+        <p
+            style="margin-top:32px; font-size:0.85rem; opacity:0.6; border-left:3px solid var(--brand-accent); padding-left:16px;">
+            <strong>Regla:</strong> El color de acento es un <em>acento</em>, no un color dominante. Máx 10–15% de
+            presencia visual.
+        </p>
+    </section>
+
+    <!-- ═══════════════ 03 · TIPOGRAFÍA ═══════════════ -->
+    <section class="section">
+        <div class="section-title">03 · Tipografía</div>
+        <h2>{{FUENTE_PRINCIPAL}}</h2>
+        <p style="margin-bottom:32px;"><a href="https://fonts.google.com/specimen/{{FUENTE_PRINCIPAL}}" target="_blank"
+                style="color:var(--brand-accent);">Google Fonts →</a></p>
+
+        <div class="type-showcase">
+            <div class="type-row">
+                <span class="type-label">Hero · 800</span>
+                <span class="type-sample"
+                    style="font-size:3rem; font-weight:800; letter-spacing:-0.03em;">{{NOMBRE_CORTO}}</span>
+            </div>
+            <div class="type-row">
+                <span class="type-label">Headline · 700</span>
+                <span class="type-sample" style="font-size:1.8rem; font-weight:700;">{{TAGLINE}}</span>
+            </div>
+            <div class="type-row">
+                <span class="type-label">Subtitle · 600</span>
+                <span class="type-sample"
+                    style="font-size:1.2rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">Sección
+                    Destacada</span>
+            </div>
+            <div class="type-row">
+                <span class="type-label">Body · 400</span>
+                <span class="type-sample" style="font-size:1rem; font-weight:400;">Texto de párrafo con line-height
+                    generoso para máxima legibilidad en todos los dispositivos.</span>
+            </div>
+            <div class="type-row">
+                <span class="type-label">Label · 300</span>
+                <span class="type-sample"
+                    style="font-size:0.75rem; font-weight:300; text-transform:uppercase; letter-spacing:0.15em;">Etiqueta
+                    de categoría</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 04 · COMPONENTES ═══════════════ -->
+    <section class="section">
+        <div class="section-title">04 · Componentes</div>
+        <h2>UI Kit</h2>
+
+        <!-- CTA -->
+        <div class="demo-block">
+            <span class="demo-label">CTA Button</span>
+            <a href="#" class="btn-cta">{{CTA_TEXTO_EJEMPLO}}</a>
+        </div>
+
+        <!-- Outline Button -->
+        <div class="demo-block">
+            <span class="demo-label">Outline Button</span>
+            <a href="#" class="btn-outline">Saber Más</a>
+        </div>
+
+        <!-- Eyebrow Badge -->
+        <div class="demo-block">
+            <span class="demo-label">Eyebrow Badge</span>
+            <span class="eyebrow-badge">{{BADGE_TEXTO_EJEMPLO}}</span>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="demo-block">
+            <span class="demo-label">Testimonial Card</span>
+            <div class="testimonial-card">
+                <p class="quote">"{{TESTIMONIO_EJEMPLO}}"</p>
+                <p class="author">— {{TESTIMONIO_AUTOR}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 05 · FOTOGRAFÍA ═══════════════ -->
+    <section class="section">
+        <div class="section-title">05 · Dirección de Fotografía</div>
+        <h2>Visual Direction</h2>
+
+        <div class="voice-grid">
+            <div class="voice-card">
+                <div class="attr">Iluminación</div>
+                <div class="val">{{ESTILO_ILUMINACION}}</div>
+            </div>
+            <div class="voice-card">
+                <div class="attr">Mood</div>
+                <div class="val">{{MOOD_VISUAL}}</div>
+            </div>
+            <div class="voice-card">
+                <div class="attr">Composición</div>
+                <div class="val">{{COMPOSICION}}</div>
+            </div>
+            <div class="voice-card">
+                <div class="attr">Color</div>
+                <div class="val">{{PALETA_FOTOS}}</div>
+            </div>
+            <div class="voice-card">
+                <div class="attr">Pose / Estilo</div>
+                <div class="val">{{ESTILO_POSE}}</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 06 · TONO DE VOZ ═══════════════ -->
+    <section class="section">
+        <div class="section-title">06 · Tono de Voz</div>
+        <h2>Brand Voice</h2>
+
+        <div class="voice-grid">
+            <div class="voice-card">
+                <div class="attr">Idioma</div>
+                <div class="val">{{IDIOMA_PRINCIPAL}}</div>
+            </div>
+            <div class="voice-card">
+                <div class="attr">Tono</div>
+                <div class="val">{{TONO}}</div>
+            </div>
+            <div class="voice-card">
+                <div class="attr">Perspectiva</div>
+                <div class="val">{{PERSPECTIVA}}</div>
+            </div>
+            <div class="voice-card">
+                <div class="attr">Energía</div>
+                <div class="val">{{ENERGIA}}</div>
+            </div>
+        </div>
+
+        <h3 style="font-size:0.9rem; margin:40px 0 20px; opacity:0.6;">Frases Clave</h3>
+        <ul style="list-style:none; padding:0;">
+            <li
+                style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06); font-style:italic; opacity:0.85;">
+                "{{FRASE_1}}"</li>
+            <li
+                style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06); font-style:italic; opacity:0.85;">
+                "{{FRASE_2}}"</li>
+            <li
+                style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06); font-style:italic; opacity:0.85;">
+                "{{FRASE_3}}"</li>
+        </ul>
+
+        <h3 style="font-size:0.9rem; margin:40px 0 20px; opacity:0.6;">Qué decir (Dos) vs Qué no decir (Don'ts)</h3>
+        <table class="identity-table" style="margin-top: 20px;">
+            <tr style="background: rgba(255,255,255,0.03);">
+                <td style="color: #2ecc71;">✅ Sí decir (Dos)</td>
+                <td style="color: #e74c3c;">❌ No decir (Don'ts)</td>
+            </tr>
+            <tr>
+                <td>{{DOS_1}}</td>
+                <td>{{DONTS_1}}</td>
+            </tr>
+            <tr>
+                <td>{{DOS_2}}</td>
+                <td>{{DONTS_2}}</td>
+            </tr>
+            <tr>
+                <td>{{DOS_3}}</td>
+                <td>{{DONTS_3}}</td>
+            </tr>
+            <tr>
+                <td>{{DOS_4}}</td>
+                <td>{{DONTS_4}}</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ═══════════════ 07 · DESIGN TOKENS ═══════════════ -->
+    <section class="section">
+        <div class="section-title">07 · Design Tokens</div>
+        <h2>CSS Variables</h2>
+
+        <div class="code-block">
+            <pre>:root {
+    /* ── Colores ── */
+    --brand-black: {{COLOR_OSCURO}};
+    --brand-white: {{COLOR_CLARO}};
+    --brand-gray-dark: {{COLOR_TEXTO}};
+    --brand-gray-mid: {{COLOR_SECUNDARIO_1}};
+    --brand-off-white: {{COLOR_CARD_BG}};
+
+    /* ── Acento ── */
+    --brand-accent: {{COLOR_ACENTO}};
+    --brand-accent-light: {{COLOR_ACENTO_CLARO}};
+    --brand-accent-deep: {{COLOR_ACENTO_OSCURO}};
+    --brand-accent-gradient: linear-gradient(135deg, {{COLOR_ACENTO}}, {{COLOR_ACENTO_OSCURO}});
+
+    /* ── Overlays ── */
+    --brand-overlay-hero: rgba(0, 0, 0, 0.40);
+    --brand-overlay-strong: rgba(0, 0, 0, 0.55);
+
+    /* ── Tipografía ── */
+    --brand-font: '{{FUENTE_PRINCIPAL}}', sans-serif;
+
+    /* ── Espaciado ── */
+    --brand-radius: 20px;
+    --brand-max-content: 800px;
+    --brand-transition: all 0.3s ease;
+    --brand-shadow-card: 0 20px 60px rgba(0, 0, 0, 0.08);
+}</pre>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 08 · USOS INCORRECTOS ═══════════════ -->
+    <section class="section">
+        <div class="section-title">08 · Usos Incorrectos</div>
+        <h2>Don'ts</h2>
+
+        <ul class="donts-list">
+            <li><span class="icon">🚫</span> Usar colores de acento no autorizados — solo el color de acento definido
+            </li>
+            <li><span class="icon">🚫</span> Usar el acento como color dominante — máx 10–15%</li>
+            <li><span class="icon">🚫</span> Tipografías no autorizadas — solo {{FUENTE_PRINCIPAL}}</li>
+            <li><span class="icon">🚫</span> Border-radius pequeño en cards — el look es redondeado (20px)</li>
+            <li><span class="icon">🚫</span> Imágenes sin overlay oscuro — el texto necesita contraste</li>
+            <li><span class="icon">🚫</span> Texto centrado sin max-width — pierde legibilidad</li>
+        </ul>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="brand-footer">
+        <p>Manual de Marca v1.0 — {{NOMBRE_CLIENTE}} — {{MES}} {{AÑO}}</p>
+    </footer>
+
+</body>
+
+</html>

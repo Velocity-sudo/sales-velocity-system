@@ -1,0 +1,192 @@
+{
+  "slack_webhook_url": "https://hooks.slack.com/services/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",
+  "notion_tasks_db_id": "2f7e0f37-6c6d-811e-8086-ff5ac19e8f3c",
+  "team_members": [
+    "LuchoBranding",
+    "Esteban Celis",
+    "Valeria Bolivar",
+    "Johanna Cueva",
+    "Carolina Viviescas"
+  ],
+  "client_alerts": {},
+  "smtp_config": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "username": "marca@luchobranding.com",
+    "app_password": "afqazsjjcdmnovdv"
+  },
+  "team_emails": {
+    "LuchoBranding": "marca@luchobranding.com",
+    "Esteban Celis": "esteban@luchobranding.com",
+    "Valeria Bolivar": "valeria@luchobranding.com",
+    "Johanna Cueva": "johanna@luchobranding.com",
+    "Carolina Viviescas": "carolina@luchobranding.com"
+  },
+  "meta_app_token": "EAAJqZB1kmdVIBQ3tjecL5iZBFscHH3yGTBOq0yFa9ovUvCLTFxejfatjOgL4MO7T4atBR7JUbhTeTZCV69rMODqaucjqFiHP8R5zlOzXnUr62ya19VLdiilBCqLXi8wudJZBwwdkPHyZCriL4g9ibOZBNUaZB6EMZCBHfLZAq7fipxZAXNd3JQR9WvDxZBrCJMXu5bq",
+  "meta_app_id": "680577718449490",
+  "meta_app_secret": "bc6cb64afb8578017d266d000bd2df12",
+  "meta_token_expires": "2026-05-09",
+  "meta_token_type": "long_lived_60d",
+  "base_clients_path": "/Users/niko/Desktop/Clientes",
+  "clients": {
+    "walter_pagano": {
+      "name": "Walter Pagano",
+      "folder": "Walter Pagano ",
+      "meta_ad_account_id": "act_827000482808707",
+      "ghl_api_key": "pit-9502e263-a83d-495c-a1aa-13fac4f40edb",
+      "ghl_location_id": "ZB1TGjQaChjyGKO0Af0M",
+      "pipeline_ids": {
+        "leads": "J9HcmcucLdzs3434QGAJ",
+        "clientes": "8HVXKvzgQw5qT63F5dSP"
+      },
+      "enabled": true
+    },
+    "diego_paramo": {
+      "name": "Diego Páramo",
+      "folder": "Diego Paramo",
+      "meta_ad_account_id": "act_1877056666211581",
+      "ghl_api_key": "pit-13402252-ab69-4ccc-9414-df80be2a7673",
+      "ghl_location_id": "ouVnywxuvHFXuKyU3GVk",
+      "pipeline_ids": {
+        "b2b": "t3drlveQBTy2SOhZGQSV",
+        "b2c": "pjbo9BWqTAaozWvkHjbf",
+        "lanzamiento": "vTxIREiGsPAIrHBlyzPM",
+        "sistema_ventas": "xQ3ScC3vjSU4IXSvqFPh",
+        "webinar": "Iwa5uF4EAGHLMNKSBEf3"
+      },
+      "enabled": true
+    },
+    "christian_espinoza": {
+      "name": "Christian Espinoza",
+      "folder": "Christian Espinoza",
+      "meta_ad_account_id": "act_1239221503716111",
+      "ghl_api_key": "pit-04283656-2761-4ad6-bb73-3732901b7b83",
+      "ghl_location_id": "HvECNnbI3XXNHM9nR02z",
+      "pipeline_ids": {
+        "sales_velocity": "C350TV5cbvkE7HTYOed7",
+        "llamadas_ht": "EFFXprBcWZONOdDqcdw4",
+        "redes_sociales": "wzT8lpmzRCTqBIyETdcc",
+        "approval_fest": "izvu7QvO2WaMm4XsBf7o",
+        "seminario": "7zfCKf4WLi9CSca0cwbX",
+        "inversionistas": "kmLazypGpkC2dIfMcfbN",
+        "10_enero": "rDAfcEtBSaniAqaw0qga",
+        "6_diciembre": "QcMtJrtRcdnrEiGeJFtu",
+        "feria_1_nov": "cRiWaxQ7IQJcXSqB946L"
+      },
+      "enabled": true
+    },
+    "luis_corona": {
+      "name": "Luis Corona",
+      "folder": "Luis Corona",
+      "meta_ad_account_id": "act_1278359880764434",
+      "ghl_api_key": "pit-4646b116-3911-4212-ba39-14a2da8555de",
+      "ghl_location_id": "vkAJfg8EmGiRktLHgplR",
+      "pipeline_ids": {
+        "corona_home_services": "7ZnFSSOeYtwwyNwjBk8u",
+        "zona_prioritaria": "SPPore1VJrsL9ugVeajB",
+        "zona_no_prioritaria": "vy8MoiNmZ3X7qpuGsYaY",
+        "llamadas_ht": "FCqBSFJlxsqhzzeO1qa6"
+      },
+      "enabled": true
+    },
+    "victor_arroyo": {
+      "name": "Victor Arroyo",
+      "folder": "Victor Arroyo ",
+      "meta_ad_account_id": "act_1224046678810725",
+      "ghl_api_key": "pit-355b8e35-7cb3-48fc-b682-ba8875c738d0",
+      "ghl_location_id": "nu8T6I0OQzV2imOKMvEG",
+      "pipeline_ids": {
+        "academy": "NczqPsbNzkhF2r4gbo0T",
+        "clientes_vendidos": "OmIPKuIMaymfL10dTCC7",
+        "closer": "KR4y7rRcBy2oY90C0H0P",
+        "seguimiento_vip": "E7gOBJZKyDFUyC1Ajzjq",
+        "seguimientos_victor": "d8tq8vpsXpEe79uSyRQz",
+        "setter": "L39GiyPfYQTww93HEp7X"
+      },
+      "enabled": true
+    },
+    "ignacio_sanchez": {
+      "name": "Ignacio Sanchez",
+      "folder": "Ignacio Sanchez ",
+      "meta_ad_account_id": "act_512423184684678",
+      "meta_ad_account_id_alt": "act_1121013052450336",
+      "ghl_api_key": "pit-a7bb68f1-1fef-438d-8ce0-b753a439d38f",
+      "ghl_location_id": "ROUCSkxoEXHbcUSBbMVj",
+      "pipeline_ids": {
+        "agendas_siav": "riFLAm3wjYlYaaOhQdnJ",
+        "siav": "Vnbm2izkLsGWYD4xM48V",
+        "stav": "Cn0hwVXT6ioZFBJRqMbj"
+      },
+      "enabled": true
+    },
+    "chris_y_sara": {
+      "name": "Chris y Sara",
+      "folder": "Chris y Sara",
+      "meta_ad_account_id": "act_1491987691984647",
+      "ghl_api_key": "pit-b0f30238-6e8a-4dae-b1a1-565425c11c7e",
+      "ghl_location_id": "3Kmyl9965gVUjDVdqs8T",
+      "pipeline_ids": {
+        "sales_velocity_pipeline": "mpFJx9x0SpbSSkMuXBoT",
+        "llamadas_ht": "t0ti8YChVyt6KJvPUE1G",
+        "approval_fest": "Vs0Hyb55Astr3l8mQgHy",
+        "approval_fest_6_dic": "1jzXkuOm3VNaUwVeswXM",
+        "feria_1_nov": "Xp1mmeHndzBa986PgyUt",
+        "10_enero": "yVTkMafxxUWSycRnnVXF"
+      },
+      "enabled": true
+    },
+    "carolina_herrera": {
+      "name": "Carolina Herrera",
+      "folder": "Carolina Herrera",
+      "meta_ad_account_id": "act_1021420329797454",
+      "ghl_api_key": "pit-c401e57a-1363-4727-b7ca-9afef287d98e",
+      "ghl_location_id": "6V0hYZzhGWUPb9ugYALp",
+      "pipeline_ids": {
+        "instagram": "nZ4PyHyttDwGKTDqDIt8"
+      },
+      "enabled": true
+    },
+    "antonio_martinez": {
+      "name": "Antonio Martínez",
+      "folder": "Antonio Martinez",
+      "meta_ad_account_id": "",
+      "ghl_api_key": "pit-844442e5-e9b3-4278-b4d6-71cb04640a95",
+      "ghl_location_id": "ZerhOOL8gvtfGXSmLL08",
+      "pipeline_ids": {
+        "ads_funnel": "XLWMrz2DQAU17ZeUyFPy",
+        "gestion_clientes_potenciales": "IxGe0frF7Xju333Bu53J",
+        "organico": "8eXK9EzaBI7gUHZSTP9e",
+        "vsl_2": "Mray9QYZUuXetARtR5cQ",
+        "whatsapp_ads": "WyVH9DxGDDmMsCbaV5H0"
+      },
+      "enabled": true
+    },
+    "johanna_cueva": {
+      "name": "Johanna Cueva",
+      "folder": "Johanna Cueva ",
+      "meta_ad_account_id": "act_1275789740498270",
+      "ghl_api_key": "pit-5b44ab43-1e90-4faa-bc5c-d4c6202ba3c9",
+      "ghl_location_id": "uC11rVRtR1UKS2n6dxjr",
+      "pipeline_ids": {
+        "campana_meta_ads_incruises": "nfwjZt5Uf9ayee5sHxwr",
+        "clients": "rrgyTsv5kt5G29w8sj20",
+        "partnerships": "U3YbY4YUDpMJ7rRe8xH7",
+        "salsa_from_home": "m9YsLNILHHm4vHcXhT9B",
+        "social_media": "1HilcqUtV2ehdJ4re4jx"
+      },
+      "enabled": true
+    },
+    "jorge_vergara": {
+      "name": "Jorge Vergara",
+      "folder": "Jorge Vergara",
+      "meta_ad_account_id": "act_177014569512392",
+      "ghl_api_key": "pit-ea74a5af-6406-4cf4-96e5-2c1b7ff5bbcf",
+      "ghl_location_id": "zNhAQJRfUGxtXRMOblqk",
+      "pipeline_ids": {
+        "tax_preparation": "R98n4XBIaVbTT7IAfniA"
+      },
+      "enabled": true
+    }
+  },
+  "auphonic_api_key": "kL8JuPO5C447HEV52dVHXIPw02ZCsoIZ"
+}
